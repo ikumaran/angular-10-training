@@ -4,6 +4,10 @@ This is a sample project to demonstrate some of angular functionalities. Please 
 Covered unit test as well here but recommending others to contribute the same.
 Good luck!!!
 
+Thanks to https://reqres.in for providing dummy Rest end points. This enabled this project to focus on UI alone. :)
+
+To login, enter "admin" and "password" as credentials. We dont use any auth serivce here. Just a hardcoded login credential to get feel of an application.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -21,7 +21,7 @@ export class EmployeeDetailComponent implements OnInit {
   ngOnInit(): void {
     this.progressBarService.updateProgressBarStatus(true);
     this.activatedRoute.params.subscribe(param => {
-      this.httpClient.get(`https://reqres.in/api/users/${param?.id}`).subscribe(
+      this.httpClient.get(`https://reqres.in/api/users/${param.id}`).subscribe(
         (response: EmployeeResponse) => {
           this.progressBarService.updateProgressBarStatus(false);
           this.employee = response.data;
