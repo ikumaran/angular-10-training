@@ -13,6 +13,7 @@ import {ProgressBarService} from '../../app/service/progress-bar.service';
 export class EmployeeDetailComponent implements OnInit {
 
   employee: Employee;
+  errored: boolean;
 
   constructor(private httpClient: HttpClient, private snackBar: MatSnackBar,
               private activatedRoute: ActivatedRoute, private progressBarService: ProgressBarService) {
@@ -23,9 +24,11 @@ export class EmployeeDetailComponent implements OnInit {
     this.activatedRoute.params.subscribe(param => {
       this.httpClient.get(`https://reqres.in/api/users/${param.id}`).subscribe(
         (response: EmployeeResponse) => {
+          this.errored = false;
           this.progressBarService.updateProgressBarStatus(false);
           this.employee = response.data;
         }, (error => {
+          this.errored = true;
           this.progressBarService.updateProgressBarStatus(false);
           // TODO: should be configured at one place.
           this.snackBar.open(error.message, 'X', {

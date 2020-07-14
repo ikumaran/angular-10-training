@@ -4,10 +4,12 @@
       Employee Details!
     </mat-card-header>
 
-    <mat-error *ngIf="!employee" >
+    <mat-error *ngIf="errored" >
       <div style="padding: 30px">Unable to fetch Employee details!</div>
-
     </mat-error>
+    <mat-card-content *ngIf="!employee">
+            <div style="padding: 30px">Loading...</div>
+    </mat-card-content>
     <mat-card-content *ngIf="employee">
       <table>
         <tr>
