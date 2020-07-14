@@ -1,0 +1,30 @@
+<div class="main-div">
+  <mat-card class="login-form">
+    <mat-card-header>
+      <div>Please Login!</div>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <div>
+          <div>
+            <mat-form-field>
+              <input matInput type="text" [formControl]="username" placeholder="Username">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <input matInput [type]="showPassword ? 'text' : 'password'" [formControl]="password"
+                     placeholder="Password">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-checkbox (click)="showPassword = !showPassword">Show Password</mat-checkbox>
+          </div>
+          <div class="button-right">
+            <button mat-raised-button color="accent" (click)="onLogin()">Submit</button>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

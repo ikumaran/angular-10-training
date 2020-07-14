@@ -1,0 +1,51 @@
+<div class="align-center-grid">
+  <mat-card>
+    <mat-card-header>
+      Employee Details!
+    </mat-card-header>
+
+    <mat-error *ngIf="!employee" >
+      <div style="padding: 30px">Unable to fetch Employee details!</div>
+
+    </mat-error>
+    <mat-card-content *ngIf="employee">
+      <table>
+        <tr>
+          <td>
+            ID
+          </td>
+          <td>
+            {{employee.id}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            First Name
+          </td>
+          <td>
+            {{employee.first_name}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Email
+          </td>
+          <td>
+            {{employee.email}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Photo
+          </td>
+          <td>
+            <img [src]="employee.avatar" alt="Avatar">
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-footer>
+      <a routerLink="/employee">Back to Employee List</a>
+    </mat-card-footer>
+  </mat-card>
+</div>

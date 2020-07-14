@@ -1,0 +1,12 @@
+<div class="align-center-grid">
+  <p>List of all employees:</p>
+  <ul *ngFor="let employee of employees">
+    <li>
+      <a [routerLink]="employee.id">{{employee.email}}</a>
+    </li>
+  </ul>
+  <a routerLink="">Back to Login</a>
+</div>
+
+
+

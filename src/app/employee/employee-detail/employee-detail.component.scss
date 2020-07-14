@@ -1,0 +1,15 @@
+.align-center-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  td:nth-child(even) {
+    background-color: beige;
+  }
+  td:nth-child(odd) {
+    background-color: bisque;
+  }
+}
+

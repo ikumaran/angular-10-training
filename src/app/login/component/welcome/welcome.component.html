@@ -1,0 +1,4 @@
+<div class="align-center">
+  <p *ngIf="loginUserInfo?.isLoginSuccess">Welcome {{loginUserInfo.loggedInUser}}!</p>
+  <p *ngIf="loginUserInfo && !loginUserInfo.isLoginSuccess" class="mat-error">You are not allowed to access!</p>
+</div>
